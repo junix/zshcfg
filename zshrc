@@ -1,3 +1,4 @@
+OS=$(uname)
 #i Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
@@ -206,8 +207,14 @@ DEFAULT_USER="junix"
 export GOROOT=/usr/local/go
 export EDITOR=vim
 
-. /usr/local/Cellar/autojump/22.2.4/etc/profile.d/autojump.sh
-
+case $OS in
+   "Darwin")
+      . /usr/local/Cellar/autojump/22.2.4/etc/profile.d/autojump.sh
+      ;;
+    "Linux")
+      . /usr/share/autojump/autojump.zsh
+      ;;
+esac
 
 
 bindkey '^R' history-incremental-search-backward
@@ -217,12 +224,19 @@ bindkey '^N' history-search-forward
 
 #alias vim='vim -w ~/.vimlog "$@"'
 
-alias ls='gls --color=auto'
+case $OS in
+  "Darwin")
+	alias ls='gls --color=auto'
+	alias javac="javac -J-Dfile.encoding=utf8"
+	;;
+   *)
+	;;
+esac
+
 alias cls='clear'
 alias ll='ls -l'
 alias la='ls -a'
 alias vi='vim'
-alias javac="javac -J-Dfile.encoding=utf8"
 alias grep="grep --color=auto"
 alias -s html=subl   # 在命令行直接输入后缀为 html 的文件名，会在 TextMate 中打开
 alias -s rb=subl     # 在命令行直接输入 ruby 文件，会在 TextMate 中打开
@@ -239,10 +253,6 @@ alias -s bz2='tar -xjvf'
 alias co='./rebar comp'
 alias b='./rebar comp sh'
 #source ~/otp17/activate
-
-
-# byobu configuration
-export BYOBU_PREFIX=$(brew --prefix)
 
 ##======= docker ========
 #export DOCKER_HOST=tcp://192.168.59.103:2376
