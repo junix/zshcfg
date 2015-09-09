@@ -137,6 +137,8 @@ alias m103="ssh mos@mos103"
 alias mm102='mosh --ssh="ssh -t mos@dev.bitbrothers.io ssh in-102-bj"'
 alias m104="ssh mos@mos104"
 alias m105="ssh mos@mos105"
+alias m107="ssh mos@mos107"
+alias m108="ssh mos@mos108"
 alias n2="cd ~/n2&&vagrant ssh"
 alias n1="cd ~/n1&&vagrant ssh"
 alias yr='ssh root@123.59.67.127'
