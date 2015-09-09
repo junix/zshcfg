@@ -184,6 +184,8 @@ alias pushmaxwellproto="git push ssh://wanglijun@review.starfish.im:29418/maxwel
 alias pushlifeproto="git push ssh://wanglijun@review.starfish.im:29418/lifebook-protocol HEAD:refs/for/master"
 
 
+alias u='ssh ubuntu' 
+
 alias blog="cd /mnt1/logs/maxwell-backend"
 alias flog="cd /mnt1/logs/maxwell-frontend"
 alias mlog="cd /mnt1/logs/maxwell-master"
