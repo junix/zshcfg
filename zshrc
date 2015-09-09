@@ -205,6 +205,10 @@ alias eflog="view  /mnt1/logs/maxwell-frontend/info.log"
 alias emlog="view  /mnt1/logs/maxwell-master/info.log"
 
 
+# ============= [configuration sync] =============
+alias update_zsh_cfg="cd ~/zshcfg && git pull"
+
+
 # ZSH_THEME="miloshadzic"
 DEFAULT_USER="junix"
 
