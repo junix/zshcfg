@@ -357,3 +357,14 @@ alias dev="mux dev"
 
 
 alias bak="cd /opt/mos/codebase/maxwell-backend"
+
+case $OS in
+   "Darwin")
+        export PROTO_INCLUDE='/opt/mos/codebase/protobuf/include'
+        export PROTO_LIB='/opt/mos/codebase/protobuf/lib/mac'
+        export BOOST_INCLUDE='/opt/mos/codebase/boost/include'
+        export BOOST_LIB='/opt/mos/codebase/boost/lib/mac'
+        ;;
+    *)
+        ;;
+esac
