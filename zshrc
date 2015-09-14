@@ -56,7 +56,7 @@ plugins=(sudo)
 plugins=(vagrant)
 plugins=(colored-man)
 plugins=(tmux)
-plugins=(osx)
+#plugins=(osx)
 
 # User configuration
 #
@@ -221,6 +221,8 @@ case $OS in
       ;;
     "Linux")
       . /usr/share/autojump/autojump.zsh
+      # bind capsLk to ctrl
+      setxkbmap -option ctrl:nocaps
       ;;
 esac
 
@@ -357,6 +359,21 @@ alias dev="mux dev"
 
 
 alias bak="cd /opt/mos/codebase/maxwell-backend"
+
+## --- sudo ----
+sudo-command-line() {
+    [[ -z $BUFFER ]] && zle up-history
+    [[ $BUFFER != sudo\ * ]] && BUFFER="sudo $BUFFER"
+#光标移动到行末
+    zle end-of-line
+}
+zle -N sudo-command-line
+#定义快捷键为： [Esc] [Esc]
+
+bindkey "\e\e" sudo-command-line
+
+
+
 
 case $OS in
    "Darwin")
