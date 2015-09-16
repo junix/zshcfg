@@ -357,3 +357,23 @@ alias dev="mux dev"
 
 
 alias bak="cd /opt/mos/codebase/maxwell-backend"
+
+
+case $OS in
+        "Linux")
+        I()
+        {
+          sudo apt-get install $@
+        }
+        S()
+        {
+          apt-get source $@
+        }
+        s()
+        {
+          apt-cache search $@
+        }
+        ;;
+        "Darwin")
+        ;;
+esac
