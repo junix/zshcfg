@@ -362,6 +362,27 @@ alias dev="mux dev"
 
 alias bak="cd /opt/mos/codebase/maxwell-backend"
 
+case $OS in
+        "Linux")
+        I()
+        {
+          sudo apt-get install $@
+        }
+        S()
+        {
+          apt-get source $@
+        }
+        s()
+        {
+          apt-cache search $@
+        }
+        ;;
+        "Darwin")
+        ;;
+esac
+
+
+
 ## --- sudo ----
 sudo-command-line() {
     [[ -z $BUFFER ]] && zle up-history
@@ -373,8 +394,6 @@ zle -N sudo-command-line
 #定义快捷键为： [Esc] [Esc]
 
 bindkey "\e\e" sudo-command-line
-
-
 
 
 case $OS in
