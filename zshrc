@@ -178,12 +178,14 @@ alias pushqt="git push ssh://wanglijun@review.starfish.im:29418/starfish-qt HEAD
 alias pushmxqt="git push ssh://wanglijun@review.starfish.im:29418/maxwell-client-qt HEAD:refs/for/master"
 alias pushbackend="git push ssh://wanglijun@review.starfish.im:29418/maxwell-backend HEAD:refs/for/master"
 alias pushbbbin="git push ssh://wanglijun@review.starfish.im:29418/bb_bin HEAD:refs/for/master"
+alias pushbblib="git push ssh://wanglijun@review.starfish.im:29418/bb_lib HEAD:refs/for/master"
 alias pushlocalbackend="git push junix@192.168.33.1:/repo/maxwell-backend HEAD:refs/for/master"
 alias pushfrontend="git push ssh://wanglijun@review.starfish.im:29418/maxwell-frontend HEAD:refs/for/master"
 alias pushmaster="git push ssh://wanglijun@review.starfish.im:29418/maxwell-master HEAD:refs/for/master"
 alias pusharm="git push ssh://wanglijun@review.starfish.im:29418/armstrong HEAD:refs/for/master"
 alias pushmaxwellproto="git push ssh://wanglijun@review.starfish.im:29418/maxwell-protocol HEAD:refs/for/master"
 alias pushlifeproto="git push ssh://wanglijun@review.starfish.im:29418/lifebook-protocol HEAD:refs/for/master"
+alias pushbfs-client-qt="git push ssh://wanglijun@review.starfish.im:29418/bfs-client-qt HEAD:refs/for/master"
 
 
 alias u='ssh ubuntu' 
