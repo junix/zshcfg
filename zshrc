@@ -2,16 +2,28 @@ OS=$(uname)
 #i Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
+# ====== [powerline bullet-train] ========
+ZSH_THEME="bullet-train"
+BULLETTRAIN_STATUS_SHOW=true
+#BULLETTRAIN_PROMPT_CHAR=\λ
+BULLETTRAIN_PROMPT_CHAR=\>
+BULLETTRAIN_PROMPT_SEPARATE_LINE=false
+BULLETTRAIN_STATUS_EXIT_SHOW=true
+BULLETTRAIN_TIME_SHOW=false
+BULLETTRAIN_DIR_EXTENDED=0
+
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="cloud"
-ZSH_THEME="powerlevel9k/powerlevel9k"
-POWERLEVEL9K_PROMPT_ON_NEWLINE=true
-# POWERLEVEL9K_COLOR_SCHEME='light'
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir rbenv vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status)
+
+# ====== [powerlevel9k powerline] ========
+# ZSH_THEME="cloud"
+# ZSH_THEME="powerlevel9k/powerlevel9k"
+# POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+# #POWERLEVEL9K_COLOR_SCHEME='light'
+# POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir rbenv vcs)
+# POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status)
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -406,3 +418,26 @@ case $OS in
     *)
         ;;
 esac
+
+
+
+
+# ====== [powerline2] ========
+# function powerline_precmd() {
+# PS1="$(~/powerline-shell.py $? --shell zsh 2> /dev/null)"
+#
+# }
+#
+# function install_powerline_precmd() {
+# for s in "${precmd_functions[@]}"; do
+#         if [ "$s" = "powerline_precmd"  ]; then
+#                 return
+#         fi
+# done
+# precmd_functions+=(powerline_precmd)
+#
+# }
+#
+# if [ "$TERM" != "linux"  ]; then
+#         install_powerline_precmd
+# fi
