@@ -6,14 +6,14 @@ export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="bullet-train"
 BULLETTRAIN_STATUS_SHOW=true
 #BULLETTRAIN_PROMPT_CHAR=\λ
-BULLETTRAIN_PROMPT_CHAR=\>
+BULLETTRAIN_PROMPT_CHAR=\➢
 BULLETTRAIN_PROMPT_SEPARATE_LINE=false
 BULLETTRAIN_STATUS_EXIT_SHOW=true
 BULLETTRAIN_TIME_SHOW=false
 BULLETTRAIN_DIR_EXTENDED=0
 
 # Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
+# Look in ~/.oh-my-zsh/themes/ZZ
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 
@@ -189,6 +189,7 @@ alias pushlifebookclierl="git push ssh://wanglijun@review.starfish.im:29418/life
 alias pushqt="git push ssh://wanglijun@review.starfish.im:29418/starfish-qt HEAD:refs/for/master"
 alias pushmxqt="git push ssh://wanglijun@review.starfish.im:29418/maxwell-client-qt HEAD:refs/for/master"
 alias pushbackend="git push ssh://wanglijun@review.starfish.im:29418/maxwell-backend HEAD:refs/for/master"
+alias pushdriinf="git push ssh://wanglijun@review.starfish.im:29418/dri-inf HEAD:refs/for/master"
 alias pushbbbin="git push ssh://wanglijun@review.starfish.im:29418/bb_bin HEAD:refs/for/master"
 alias pushbblib="git push ssh://wanglijun@review.starfish.im:29418/bb_lib HEAD:refs/for/master"
 alias pushlocalbackend="git push junix@192.168.33.1:/repo/maxwell-backend HEAD:refs/for/master"
@@ -226,7 +227,6 @@ alias update_zsh_cfg="cd ~/zshcfg && git pull"
 # ZSH_THEME="miloshadzic"
 DEFAULT_USER="junix"
 
-export GOROOT=/usr/local/go
 export EDITOR=vim
 
 case $OS in
@@ -250,8 +250,9 @@ bindkey '^N' history-search-forward
 
 case $OS in
   "Darwin")
-	alias ls='gls --color=auto'
+	#alias ls='gls --color=auto'
 	alias javac="javac -J-Dfile.encoding=utf8"
+	alias vim="mvim -v" 
 	;;
    *)
 	;;
@@ -441,3 +442,39 @@ esac
 # if [ "$TERM" != "linux"  ]; then
 #         install_powerline_precmd
 # fi
+#
+#
+#
+#
+
+
+
+
+## ====== [brew] ======
+export HOMEBREW_GITHUB_API_TOKEN="7888bdd91bdce75dc0c0583bcb7e3fc2727dffde"
+
+
+
+#export GTK_PATH=/usr/local/lib/gtk-2.0
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_66.jdk/Contents/Home/
+
+
+# ==== [golang] =====
+export GOROOT=/usr/local/go
+export GOARCH=amd64
+export GOOS=darwin
+
+
+alias mvn3="/opt/apache-maven-3.3.3/bin/mvn"
+
+
+loginprod() {
+        #curl -X POST -H "Content-Type: application/json" -d '{"phone":"13809046866","password":"WLJ_XYZ","auto_signin":"0"}' https://api.starfish.im/v1/sessions
+        http POST https://api.starfish.im/v1/sessions<<<'{"phone":"13809046866", "password": "WLJ_XYZ", "auto_signin":"0"}'
+}
+
+prod_login() {
+        #curl -X POST -H "Content-Type: application/json" -d '{"phone":"13809046866","password":"WLJ_XYZ","auto_signin":"0"}' https://api.starfish.im/v1/sessions
+        http POST https://api.starfish.im/v1/sessions<<<'{"phone":"13809046866", "password": "WLJ_XYZ", "auto_signin":"0"}'
+}
+
