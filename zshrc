@@ -84,7 +84,7 @@ export PATH=$HOME/bazel/output:$PATH
 source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -139,33 +139,33 @@ alias e="mvim"
 alias vm="mvim -v"
 alias mktemp="gmktemp"
 
-alias m005="mosh mos@dev.bitbrothers.io"
-alias m006="ssh mos@mos006"
-alias m007="ssh mos@mos007"
-alias m100="ssh mos@mos100"
-alias m101="ssh mos@mos101"
-alias m102="ssh mos@mos102"
-alias m103="ssh mos@mos103"
-alias mm102='mosh --ssh="ssh -t mos@dev.bitbrothers.io ssh in-102-bj"'
-alias m104="ssh mos@mos104"
-alias m105="ssh mos@mos105"
-alias m107="ssh mos@mos107"
-alias m108="ssh mos@mos108"
+alias m005="LC_ALL=zh_CN.UTF-8 LANG=zh_CN.UTF-8 mosh mos@dev.bitbrothers.io"
+alias c="LC_ALL=zh_CN.UTF-8 LANG=zh_CN.UTF-8 mosh mos@dev.bitbrothers.io"
+alias m006="LC_ALL=zh_CN.UTF-8 LANG=zh_CN.UTF-8 ssh mos@mos006"
+alias m007="LC_ALL=zh_CN.UTF-8 LANG=zh_CN.UTF-8 ssh mos@mos007"
+alias m100="LC_ALL=zh_CN.UTF-8 LANG=zh_CN.UTF-8 ssh mos@mos100"
+alias m101="LC_ALL=zh_CN.UTF-8 LANG=zh_CN.UTF-8 ssh mos@mos101"
+alias m102="LC_ALL=zh_CN.UTF-8 LANG=zh_CN.UTF-8 ssh mos@mos102"
+alias m103="LC_ALL=zh_CN.UTF-8 LANG=zh_CN.UTF-8 ssh mos@mos103"
+alias m104="LC_ALL=zh_CN.UTF-8 LANG=zh_CN.UTF-8 ssh mos@mos104"
+alias m105="LC_ALL=zh_CN.UTF-8 LANG=zh_CN.UTF-8 ssh mos@mos105"
+alias m107="LC_ALL=zh_CN.UTF-8 LANG=zh_CN.UTF-8 ssh mos@mos107"
+alias m108="LC_ALL=zh_CN.UTF-8 LANG=zh_CN.UTF-8 ssh mos@mos108"
 alias n2="cd ~/n2&&vagrant ssh"
 alias n1="cd ~/n1&&vagrant ssh"
 alias yr='ssh root@123.59.67.127'
 alias ym='ssh mos@123.59.67.127'
-alias y200='ssh -t mos@123.59.67.127 ssh 10.10.137.189'
-alias y201='ssh -t mos@123.59.67.127 ssh 10.10.141.136'
-alias y202='ssh -t mos@123.59.67.127 ssh 10.10.144.31'
-alias y203='ssh -t mos@123.59.67.127 ssh 10.10.117.33'
-alias y204='ssh -t mos@123.59.67.127 ssh 10.10.128.69'
-alias y205='ssh -t mos@123.59.67.127 ssh 10.10.116.204'
-alias y206='ssh -t mos@123.59.67.127 ssh 10.10.143.54'
-alias y207='ssh -t mos@123.59.67.127 ssh 10.10.113.248'
-alias y208='ssh -t mos@123.59.67.127 ssh 10.10.132.241'
-alias y209='ssh -t mos@123.59.67.127 ssh 10.10.130.112'
-alias y200='ssh -t mos@123.59.67.127 ssh 10.10.137.189'
+alias y200='LC_ALL=zh_CN.UTF-8 LANG=zh_CN.UTF-8 ssh -t mos@123.59.67.127 ssh 10.10.137.189'
+alias y201='LC_ALL=zh_CN.UTF-8 LANG=zh_CN.UTF-8 ssh -t mos@123.59.67.127 ssh 10.10.141.136'
+alias y202='LC_ALL=zh_CN.UTF-8 LANG=zh_CN.UTF-8 ssh -t mos@123.59.67.127 ssh 10.10.144.31'
+alias y203='LC_ALL=zh_CN.UTF-8 LANG=zh_CN.UTF-8 ssh -t mos@123.59.67.127 ssh 10.10.117.33'
+alias y204='LC_ALL=zh_CN.UTF-8 LANG=zh_CN.UTF-8 ssh -t mos@123.59.67.127 ssh 10.10.128.69'
+alias y205='LC_ALL=zh_CN.UTF-8 LANG=zh_CN.UTF-8 ssh -t mos@123.59.67.127 ssh 10.10.116.204'
+alias y206='LC_ALL=zh_CN.UTF-8 LANG=zh_CN.UTF-8 ssh -t mos@123.59.67.127 ssh 10.10.143.54'
+alias y207='LC_ALL=zh_CN.UTF-8 LANG=zh_CN.UTF-8 ssh -t mos@123.59.67.127 ssh 10.10.113.248'
+alias y208='LC_ALL=zh_CN.UTF-8 LANG=zh_CN.UTF-8 ssh -t mos@123.59.67.127 ssh 10.10.132.241'
+alias y209='LC_ALL=zh_CN.UTF-8 LANG=zh_CN.UTF-8 ssh -t mos@123.59.67.127 ssh 10.10.130.112'
+alias y200='LC_ALL=zh_CN.UTF-8 LANG=zh_CN.UTF-8 ssh -t mos@123.59.67.127 ssh 10.10.137.189'
 alias yr201='ssh -t root@123.59.67.127 ssh 10.10.141.136'
 alias yr202='ssh -t root@123.59.67.127 ssh 10.10.144.31'
 alias yr203='ssh -t root@123.59.67.127 ssh 10.10.117.33'
@@ -315,7 +315,6 @@ zle -N fancy-ctrl-z
 bindkey '^Z' fancy-ctrl-z
 
 export PATH="/Users/junix/zookeeper-3.4.6/bin":${PATH}
-export HOMEBREW_GITHUB_API_TOKEN="6d0eb752df63c9b701a59e9e4ffe32dcc21d3911"
 
 gen_tags()
 {
@@ -451,9 +450,7 @@ esac
 
 
 ## ====== [brew] ======
-export HOMEBREW_GITHUB_API_TOKEN="7888bdd91bdce75dc0c0583bcb7e3fc2727dffde"
-
-
+export HOMEBREW_GITHUB_API_TOKEN="ea9cf31aee228fcdc172585be8758300e45ddd5d"
 
 #export GTK_PATH=/usr/local/lib/gtk-2.0
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_66.jdk/Contents/Home/
@@ -475,6 +472,49 @@ loginprod() {
 
 prod_login() {
         #curl -X POST -H "Content-Type: application/json" -d '{"phone":"13809046866","password":"WLJ_XYZ","auto_signin":"0"}' https://api.starfish.im/v1/sessions
-        http POST https://api.starfish.im/v1/sessions<<<'{"phone":"13809046866", "password": "WLJ_XYZ", "auto_signin":"0"}'
+        time http POST https://api.starfish.im/v1/sessions<<<'{"phone":"13809046866", "password": "WLJ_XYZ", "auto_signin":"0"}'
 }
 
+
+export MACHINE_INFO="/User/junix/server.org"
+
+root() {
+  PASSWORD=$(grep "^$1" /Users/junix/servers.org | awk '{print $4}')
+  echo $PASSWORD | reattach-to-user-namespace pbcopy
+  #echo $PASSWORD
+}
+
+ip() {
+  grep "^$1" servers.org | awk '{print $3}'
+}
+
+jdk17() {
+  export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.7.0_67.jdk/Contents/Home"
+}
+
+jdk18() {
+  export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_66.jdk/Contents/Home"
+}
+
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.7.0_67.jdk/Contents/Home"
+
+source /Users/junix/kerl/zsh_completion
+
+
+
+
+
+
+# ======= [ rebar ] =======
+gen_server() {
+   rebar create template=simplesrv srvid=$1
+}
+
+supervisor() {
+   cat ~/.template/supervisor.erl | sed "s/__MODULE_NAME__/$1/g" > "$1""_sup.erl"
+}
+
+
+## ===== [make mosh work] =====
+#export LC_ALL=zh_CN.UTF-8
+#export LANG=zh_CN.UTF-8
